@@ -1,99 +1,119 @@
-# 1. Print simples
-print("There is something at work in my soul, which I do not understand.")
-print("Hello World")
-print("Hello Gui")
+# ============================================
+# AULA: FUNDAMENTOS DE PYTHON
+# ============================================
 
-# 2. Variáveis e reatribuição
-meal = "An english muffin"
-print("Breakfast:", meal)
+# --------------------------------------------
+# 1) PRIMEIRO PROGRAMA: print()
+# --------------------------------------------
+# print() serve para mostrar mensagens na tela.
 
-meal = "Pizza"
-print("Lunch:", meal)
+print("hello world")
+print("hey, whats up")
 
-meal = "Burger"
-print("Dinner:", meal)
+# Para executar este arquivo no terminal:
+# py fundamentos.py
 
-# 3. Tipos de dados
-release_year = 2026     # int
-runtime = 120           # int
-rating_out_of_10 = 9.9  # float
 
-# 4. Operações matemáticas
-print(573 - 74 + 1)
-print(25 * 2)
-print(10 / 2)
-print(25 * 68 + 13 / 28)
+# --------------------------------------------
+# 2) VARIÁVEIS E TIPOS DE DADOS
+# --------------------------------------------
+# Em Python, você cria variáveis apenas atribuindo valores.
 
-# 5. Variáveis em expressões
-coffee_price = 2.00
-number_of_coffees = 4
-print("Total coffee cost:", coffee_price * number_of_coffees)
+nome = "Harbor"   # string (texto)
+idade = 90        # int (inteiro)
+preco = 19.90     # float (decimal)
 
-# 6. Área e potências
-quilt_width = 8
-quilt_length = 8
-print("Quilt area:", quilt_width * quilt_length)
+print(nome)
+print(idade)
+print(preco)
 
-print(6 ** 2)      # 6²
-print(7 ** 2)      # 7²
-print(8 ** 2)      # 8²
-print(6 ** 4)      # 6⁴
-print(2 ** 10)     # 1024
-print(9 ** 3)      # 9³
-print(4 ** 0.5)    # Raiz quadrada de 4
 
-#7. Módulo - resto da divisão
-print("269 % 10 =", 269 % 10)
-print("270 % 10 =", 270 % 10)
+# --------------------------------------------
+# 3) REATRIBUIÇÃO DE VARIÁVEL
+# --------------------------------------------
+# Python permite mudar o valor (e até o tipo) da mesma variável.
 
-# 8. Concatenação de strings
-greeting = "Hey there!"
-question = "How are you doing?"
-print(greeting + " " + question)
+nome = "Harbor"
+nome = 50   # Agora 'nome' deixou de ser string e virou inteiro.
 
-# 9. Concatenação com número
-age = 10
-print("I am " + str(age) + " years old today!")
-print("I am", age, "years old today!")  # Alternativa sem str()
+print(nome)
 
-#10. Texto longo concatenado
-message = (
-    "The wind, "
-    "which had hitherto carried us along with amazing rapidity, "
-    "sank at sunset to a light breeze; "
-    "the soft air just ruffled the water and "
-    "caused a pleasant motion among the trees as we approached the shore, "
-    "from which it wafted the most delightful scent of flowers and hay."
-)
-print(message)
 
-# 11. Atualização com +=
-miles_hiked = 12
-miles_hiked += 2
-print("Total miles hiked:", miles_hiked)
+# --------------------------------------------
+# 4) DESCOBRIR O TIPO DA VARIÁVEL: type()
+# --------------------------------------------
+# type() mostra qual é o tipo atual da variável.
 
-caption = "What an amazing time to walk through nature!"
-caption += " #nofilter"
-caption += " #blessed"
-print(caption)
+print(type(nome))   # int
+print(type(preco))  # float
 
-#12. Soma acumulada
-total_price = 0
-total_price += 50.00  # new sneakers
-total_price += 39.00  # nice sweater
-total_price += 20.00  # fun books
-print("Total price:", total_price)
 
-# 13. Strings multilinha
-to_you = """
-Stranger, if you passing meet me and desire to speak to me, why
-  should you not speak to me?
-And why should I not speak to you?
-"""
-print(to_you)
+# --------------------------------------------
+# 5) OPERAÇÕES ARITMÉTICAS
+# --------------------------------------------
+# Operadores básicos:
+# +  soma
+# -  subtração
+# *  multiplicação
+# /  divisão
 
-# 14. Exemplo final
-my_age = 27
-half_my_age = my_age / 2
-name = "Guilherme"
-print("Hello", name + ", I am", my_age, "years old. Half my age is", half_my_age)
+resultado = 10 / 2
+
+print(resultado)        # 5.0
+print(type(resultado))  # float
+
+# IMPORTANTE:
+# A divisão (/) sempre retorna float,
+# mesmo quando o resultado é exato.
+
+
+# --------------------------------------------
+# 6) SOMANDO NÚMEROS
+# --------------------------------------------
+
+number1 = 10
+number2 = 5
+
+soma = number1 + number2
+print(soma)
+
+
+# --------------------------------------------
+# 7) CONVERSÃO DE TIPOS (CASTING)
+# --------------------------------------------
+# Às vezes o dado vem como texto, mas você precisa de número.
+# Use int() para converter string numérica em inteiro.
+
+number1 = 10
+number2 = int("5")   # "5" (string) -> 5 (int)
+
+soma = number1 + number2
+print(soma)
+
+# Se tentar converter algo que não é número, dá erro:
+# int("Harbor")  -> ValueError
+
+
+# --------------------------------------------
+# 8) CONVERTER NÚMERO PARA STRING
+# --------------------------------------------
+# Também é possível fazer o contrário usando str().
+
+name = str(10)
+
+print(type(name))  # string
+print(name)
+
+
+# --------------------------------------------
+# 9) RESUMO IMPORTANTE
+# --------------------------------------------
+# Python é dinamicamente tipado:
+# - A variável não tem tipo fixo.
+# - O tipo depende do valor atual.
+# - A última atribuição é a que conta.
+
+# Use sempre:
+# type() -> para verificar o tipo
+# int()  -> converter para inteiro
+# str()  -> converter para texto
