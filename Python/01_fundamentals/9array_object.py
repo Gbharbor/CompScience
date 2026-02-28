@@ -1,0 +1,1 @@
+#uso de listas e dicionários em Python para modelar dados (usuários, posts).
